@@ -7,19 +7,50 @@
 //
 
 import UIKit
+import SnapKit
+import CoreData
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Property Picker"
+        self.view.backgroundColor = .white
+
+
+        let myLabel:UILabel = UILabel()
+        myLabel.text = "Welcome back to iOS Mathew!"
+        myLabel.textColor = .black
+        myLabel.textAlignment = .center
+
+        let myButton:UIButton = UIButton()
+        myButton.setTitle("Plox", for: .normal)
+        myButton.setTitleColor(UIColor.blue, for: .normal)
+        myButton.addTarget(self, action: #selector(self.ploxinate), for: .touchUpInside)
+
+        self.view.addSubview(myLabel)
+        self.view.addSubview(myButton)
+
+        myLabel.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view)
+        }
+        
+        myButton.snp.makeConstraints { (make) in
+            make.top.equalTo(myLabel.snp.bottom)
+            make.centerX.equalTo(self.view)
+        }
+        /*
+        APIDataService().process() { resObj, resJson, error in
+            print("JSON", resJson)
+            print("Obj", resObj)
+            print("error", error)
+        }
+        */
+        APIDataService().process()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func ploxinate(sender: UIButton) {
+        NSLog("pwet")
     }
-
-
 }
 

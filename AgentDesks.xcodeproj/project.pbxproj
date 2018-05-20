@@ -7,19 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88F258D88DC61FA99373DAF0 /* CacheTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F25DD46CA11FE9A56575B7 /* CacheTimer.swift */; };
+		88F2592489E9900BC672745C /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */; };
+		88F259657A8C5AABF4E2B3ED /* APICoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F258C7547F79BA409465C9 /* APICoreDataService.swift */; };
+		88F25D29637E83180C7195F1 /* APIDataRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */; };
+		AF150D9D20AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */; };
+		AF150D9E20AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */; };
+		AF150D9F20AFF8D500BB4831 /* Exclusions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9920AFF8D500BB4831 /* Exclusions+CoreDataClass.swift */; };
+		AF150DA020AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9A20AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift */; };
+		AF150DA120AFF8D500BB4831 /* Facilities+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9B20AFF8D500BB4831 /* Facilities+CoreDataClass.swift */; };
+		AF150DA220AFF8D500BB4831 /* Facilities+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9C20AFF8D500BB4831 /* Facilities+CoreDataProperties.swift */; };
+		AF150DA520B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150DA320B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift */; };
+		AF150DA620B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150DA420B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift */; };
+		AF150DA820B15B8000BB4831 /* APIDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150DA720B15B8000BB4831 /* APIDataService.swift */; };
+		AF150DAA20B1619A00BB4831 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150DA920B1619A00BB4831 /* AppConstants.swift */; };
 		AF41B69520AE978C001BFBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69420AE978C001BFBC3 /* AppDelegate.swift */; };
 		AF41B69720AE978C001BFBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69620AE978C001BFBC3 /* ViewController.swift */; };
-		AF41B69A20AE978C001BFBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF41B69820AE978C001BFBC3 /* Main.storyboard */; };
 		AF41B69D20AE978C001BFBC3 /* AgentDesks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */; };
 		AF41B69F20AE978E001BFBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF41B69E20AE978E001BFBC3 /* Assets.xcassets */; };
 		AF41B6A220AE978E001BFBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */; };
+		D23A4EE398CD419653D7E457 /* Pods_AgentDesks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4EC3BA23E9148F3DF94D33 /* Pods_AgentDesks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C4EC3BA23E9148F3DF94D33 /* Pods_AgentDesks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgentDesks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB61ED6A2AF88E6B8A5F049 /* Pods-AgentDesks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentDesks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgentDesks/Pods-AgentDesks.debug.xcconfig"; sourceTree = "<group>"; };
+		88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataRequestService.swift; sourceTree = "<group>"; };
+		88F258C7547F79BA409465C9 /* APICoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICoreDataService.swift; sourceTree = "<group>"; };
+		88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		88F25DD46CA11FE9A56575B7 /* CacheTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTimer.swift; sourceTree = "<group>"; };
+		8EBD28C52843104103C7209E /* Pods-AgentDesks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentDesks.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgentDesks/Pods-AgentDesks.release.xcconfig"; sourceTree = "<group>"; };
+		AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacilityOptions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacilityOptions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF150D9920AFF8D500BB4831 /* Exclusions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exclusions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF150D9A20AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exclusions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF150D9B20AFF8D500BB4831 /* Facilities+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Facilities+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF150D9C20AFF8D500BB4831 /* Facilities+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Facilities+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF150DA320B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExclusionList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF150DA420B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExclusionList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF150DA720B15B8000BB4831 /* APIDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataService.swift; sourceTree = "<group>"; };
+		AF150DA920B1619A00BB4831 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		AF41B69120AE978C001BFBC3 /* AgentDesks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentDesks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF41B69420AE978C001BFBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF41B69620AE978C001BFBC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF41B69920AE978C001BFBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF41B69C20AE978C001BFBC3 /* AgentDesks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AgentDesks.xcdatamodel; sourceTree = "<group>"; };
 		AF41B69E20AE978E001BFBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF41B6A120AE978E001BFBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23A4EE398CD419653D7E457 /* Pods_AgentDesks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D343E3C2F07012F81CDB133 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C4EC3BA23E9148F3DF94D33 /* Pods_AgentDesks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A52C84A34627E57A81CED92E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EB61ED6A2AF88E6B8A5F049 /* Pods-AgentDesks.debug.xcconfig */,
+				8EBD28C52843104103C7209E /* Pods-AgentDesks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF41B68820AE978C001BFBC3 = {
 			isa = PBXGroup;
 			children = (
 				AF41B69320AE978C001BFBC3 /* AgentDesks */,
 				AF41B69220AE978C001BFBC3 /* Products */,
+				A52C84A34627E57A81CED92E /* Pods */,
+				7D343E3C2F07012F81CDB133 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +106,26 @@
 		AF41B69320AE978C001BFBC3 /* AgentDesks */ = {
 			isa = PBXGroup;
 			children = (
+				AF150DA320B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift */,
+				AF150DA420B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift */,
+				AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */,
+				AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */,
+				AF150D9920AFF8D500BB4831 /* Exclusions+CoreDataClass.swift */,
+				AF150D9A20AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift */,
+				AF150D9B20AFF8D500BB4831 /* Facilities+CoreDataClass.swift */,
+				AF150D9C20AFF8D500BB4831 /* Facilities+CoreDataProperties.swift */,
 				AF41B69420AE978C001BFBC3 /* AppDelegate.swift */,
 				AF41B69620AE978C001BFBC3 /* ViewController.swift */,
-				AF41B69820AE978C001BFBC3 /* Main.storyboard */,
 				AF41B69E20AE978E001BFBC3 /* Assets.xcassets */,
 				AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */,
 				AF41B6A320AE978E001BFBC3 /* Info.plist */,
 				AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */,
+				88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */,
+				AF150DA720B15B8000BB4831 /* APIDataService.swift */,
+				AF150DA920B1619A00BB4831 /* AppConstants.swift */,
+				88F25DD46CA11FE9A56575B7 /* CacheTimer.swift */,
+				88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */,
+				88F258C7547F79BA409465C9 /* APICoreDataService.swift */,
 			);
 			path = AgentDesks;
 			sourceTree = "<group>";
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF41B6A620AE978E001BFBC3 /* Build configuration list for PBXNativeTarget "AgentDesks" */;
 			buildPhases = (
+				A84A1AB14E060434C5890DA9 /* [CP] Check Pods Manifest.lock */,
 				AF41B68D20AE978C001BFBC3 /* Sources */,
 				AF41B68E20AE978C001BFBC3 /* Frameworks */,
 				AF41B68F20AE978C001BFBC3 /* Resources */,
+				D49C4C2D88DFCC7568317E61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +192,90 @@
 			files = (
 				AF41B6A220AE978E001BFBC3 /* LaunchScreen.storyboard in Resources */,
 				AF41B69F20AE978E001BFBC3 /* Assets.xcassets in Resources */,
-				AF41B69A20AE978C001BFBC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A84A1AB14E060434C5890DA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgentDesks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D49C4C2D88DFCC7568317E61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AgentDesks/Pods-AgentDesks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgentDesks/Pods-AgentDesks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF41B68D20AE978C001BFBC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF150DA120AFF8D500BB4831 /* Facilities+CoreDataClass.swift in Sources */,
 				AF41B69720AE978C001BFBC3 /* ViewController.swift in Sources */,
+				AF150D9D20AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift in Sources */,
+				AF150DA820B15B8000BB4831 /* APIDataService.swift in Sources */,
 				AF41B69D20AE978C001BFBC3 /* AgentDesks.xcdatamodeld in Sources */,
+				AF150DA220AFF8D500BB4831 /* Facilities+CoreDataProperties.swift in Sources */,
+				AF150D9F20AFF8D500BB4831 /* Exclusions+CoreDataClass.swift in Sources */,
+				AF150DA620B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift in Sources */,
+				AF150D9E20AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift in Sources */,
 				AF41B69520AE978C001BFBC3 /* AppDelegate.swift in Sources */,
+				AF150DA520B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift in Sources */,
+				AF150DAA20B1619A00BB4831 /* AppConstants.swift in Sources */,
+				AF150DA020AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift in Sources */,
+				88F2592489E9900BC672745C /* PersistenceService.swift in Sources */,
+				88F258D88DC61FA99373DAF0 /* CacheTimer.swift in Sources */,
+				88F25D29637E83180C7195F1 /* APIDataRequestService.swift in Sources */,
+				88F259657A8C5AABF4E2B3ED /* APICoreDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF41B69820AE978C001BFBC3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF41B69920AE978C001BFBC3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,15 +403,13 @@
 		};
 		AF41B6A720AE978E001BFBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB61ED6A2AF88E6B8A5F049 /* Pods-AgentDesks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZQNCPBUJ3M;
 				INFOPLIST_FILE = AgentDesks/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yidgetsoft.AgentDesks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -300,15 +419,13 @@
 		};
 		AF41B6A820AE978E001BFBC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EBD28C52843104103C7209E /* Pods-AgentDesks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZQNCPBUJ3M;
 				INFOPLIST_FILE = AgentDesks/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yidgetsoft.AgentDesks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
