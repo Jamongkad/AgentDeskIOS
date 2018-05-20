@@ -5,6 +5,7 @@
 
 import Foundation
 import CoreData
+import RxSwift
 
 class APICoreDataService {
 
@@ -12,8 +13,15 @@ class APICoreDataService {
     var facilities = [Facilities]()
     var exclusionList = [ExclusionList]()
 
-    func fetchData() -> NSMutableDictionary {
+    let finalData = Variable<NSMutableDictionary>([:])
+    var finalDataChanged:Observable<NSMutableDictionary> {
+        return finalData.asObservable()
+    }
+
+    func fetchData() {
         do {
+
+            print("Fetching")
 
             let facilitiesRequest: NSFetchRequest<Facilities> = Facilities.fetchRequest()
             let exclusionsRequest: NSFetchRequest<ExclusionList> = ExclusionList.fetchRequest()
@@ -70,7 +78,7 @@ class APICoreDataService {
         } catch let error as NSError {
             print("Unexpected error: \(error).")
         }
-        
-        return self.data
+
+        self.finalData.value = self.data
     }
 }

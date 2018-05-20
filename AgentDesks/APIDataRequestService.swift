@@ -10,7 +10,7 @@ import CoreData
 
 class APIDataRequestService {
 
-    func requestDataFromAPI() {
+    func requestDataFromAPI(completion: (() -> Void)!) {
 
         //let's clear data before we make a request for a fresh batch.
         self.reset(entity: "Facilities")
@@ -25,7 +25,6 @@ class APIDataRequestService {
                 }
 
                 let json = JSON(resultValue)
-                //print(json)
 
                 for (_, facility) in json["facilities"] {
 
@@ -55,8 +54,7 @@ class APIDataRequestService {
                     PersistenceService.saveContext()
                 }
 
-                print("Saving Data")
-                print("Output: ", APICoreDataService().fetchData())
+                completion?()
 
             case .failure(let error):
                 print("Error: ", error)

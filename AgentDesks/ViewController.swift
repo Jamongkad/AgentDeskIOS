@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import CoreData
+import RxSwift
 
 class ViewController: UIViewController {
 
@@ -39,14 +40,12 @@ class ViewController: UIViewController {
             make.top.equalTo(myLabel.snp.bottom)
             make.centerX.equalTo(self.view)
         }
-        /*
-        APIDataService().process() { resObj, resJson, error in
-            print("JSON", resJson)
-            print("Obj", resObj)
-            print("error", error)
-        }
-        */
-        APIDataService().process()
+
+        let d = APIDataService()
+        d.process()
+        d.coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
+            print(dictionary)
+        })
     }
 
     @objc func ploxinate(sender: UIButton) {

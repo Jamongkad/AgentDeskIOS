@@ -16,20 +16,22 @@ class APIDataService {
 
     let disposeBag = DisposeBag()
     let cacheTimer = CacheTimer()
+    let coreDataService = APICoreDataService()
 
-    //func process(completionHandler: @escaping (NSDictionary?, JSON?, Error?) -> ()) {
     init() {
         self.cacheTimer.startTimer()
         self.cacheTimer.signalChange
-                .subscribe(onNext: { [weak self] signalBool in
+                .subscribe(onNext: { signalBool in
             if signalBool {
-                print("Blow Cache: ", signalBool)
-                APIDataRequestService().requestDataFromAPI()
+                let requestService = APIDataRequestService()
+                requestService.requestDataFromAPI(completion: { () in
+                    self.coreDataService.fetchData()
+                })
             }
         })
     }
 
-    func process() -> NSMutableDictionary {
-        return APICoreDataService().fetchData()
+    func process() {
+        self.coreDataService.fetchData()
     }
 }
