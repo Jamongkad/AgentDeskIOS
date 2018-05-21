@@ -11,6 +11,7 @@
 		88F259657A8C5AABF4E2B3ED /* APICoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F258C7547F79BA409465C9 /* APICoreDataService.swift */; };
 		88F25CC8D2DD7C59DD6DBA53 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F253D69D53A5BB21CE178A /* PropertyTableViewController.swift */; };
 		88F25D29637E83180C7195F1 /* APIDataRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */; };
+		88F25F37EEDCE82153697623 /* ExclusionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2503BB45F28ED1798A43A /* ExclusionValidator.swift */; };
 		AF150D9D20AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */; };
 		AF150D9E20AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */; };
 		AF150D9F20AFF8D500BB4831 /* Exclusions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150D9920AFF8D500BB4831 /* Exclusions+CoreDataClass.swift */; };
@@ -33,12 +34,15 @@
 		AF41B69D20AE978C001BFBC3 /* AgentDesks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */; };
 		AF41B69F20AE978E001BFBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF41B69E20AE978E001BFBC3 /* Assets.xcassets */; };
 		AF41B6A220AE978E001BFBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */; };
+		AFDB9E7620B2A84A003BEC69 /* UserList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDB9E7420B2A84A003BEC69 /* UserList+CoreDataClass.swift */; };
+		AFDB9E7720B2A84A003BEC69 /* UserList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDB9E7520B2A84A003BEC69 /* UserList+CoreDataProperties.swift */; };
 		D23A4EE398CD419653D7E457 /* Pods_AgentDesks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4EC3BA23E9148F3DF94D33 /* Pods_AgentDesks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C4EC3BA23E9148F3DF94D33 /* Pods_AgentDesks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgentDesks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB61ED6A2AF88E6B8A5F049 /* Pods-AgentDesks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentDesks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgentDesks/Pods-AgentDesks.debug.xcconfig"; sourceTree = "<group>"; };
+		88F2503BB45F28ED1798A43A /* ExclusionValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExclusionValidator.swift; path = Helpers/ExclusionValidator.swift; sourceTree = "<group>"; };
 		88F253D69D53A5BB21CE178A /* PropertyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyTableViewController.swift; path = UI/Tables/PropertyTableViewController.swift; sourceTree = "<group>"; };
 		88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIDataRequestService.swift; path = Services/APIDataRequestService.swift; sourceTree = "<group>"; };
 		88F258C7547F79BA409465C9 /* APICoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICoreDataService.swift; path = Services/APICoreDataService.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		AF41B69E20AE978E001BFBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF41B6A120AE978E001BFBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF41B6A320AE978E001BFBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFDB9E7420B2A84A003BEC69 /* UserList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFDB9E7520B2A84A003BEC69 /* UserList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,19 +140,22 @@
 				AF150DA320B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift */,
 				AF150DA420B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift */,
 				AF150D9920AFF8D500BB4831 /* Exclusions+CoreDataClass.swift */,
-				AF150DB920B28AED00BB4831 /* PropertyDetailTableViewController.swift */,
 				AF150D9A20AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift */,
 				AF150D9B20AFF8D500BB4831 /* Facilities+CoreDataClass.swift */,
 				AF150D9C20AFF8D500BB4831 /* Facilities+CoreDataProperties.swift */,
 				AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */,
 				AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */,
 				88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */,
+				AF150DB920B28AED00BB4831 /* PropertyDetailTableViewController.swift */,
 				AF150DAB20B247DE00BB4831 /* PropertyTableViewCell.swift */,
 				88F253D69D53A5BB21CE178A /* PropertyTableViewController.swift */,
+				AFDB9E7420B2A84A003BEC69 /* UserList+CoreDataClass.swift */,
+				AFDB9E7520B2A84A003BEC69 /* UserList+CoreDataProperties.swift */,
 				AF41B69620AE978C001BFBC3 /* ViewController.swift */,
 				AF41B69E20AE978E001BFBC3 /* Assets.xcassets */,
 				AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */,
 				AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */,
+				88F2503BB45F28ED1798A43A /* ExclusionValidator.swift */,
 			);
 			path = AgentDesks;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 				AF150D9D20AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift in Sources */,
 				AF150DA820B15B8000BB4831 /* APIDataService.swift in Sources */,
 				AF41B69D20AE978C001BFBC3 /* AgentDesks.xcdatamodeld in Sources */,
+				AFDB9E7720B2A84A003BEC69 /* UserList+CoreDataProperties.swift in Sources */,
 				AF150DA220AFF8D500BB4831 /* Facilities+CoreDataProperties.swift in Sources */,
 				AF150D9F20AFF8D500BB4831 /* Exclusions+CoreDataClass.swift in Sources */,
 				AF150DA620B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift in Sources */,
@@ -292,12 +302,14 @@
 				AF150DA520B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift in Sources */,
 				AF150DAA20B1619A00BB4831 /* AppConstants.swift in Sources */,
 				AF150DBA20B28AED00BB4831 /* PropertyDetailTableViewController.swift in Sources */,
+				AFDB9E7620B2A84A003BEC69 /* UserList+CoreDataClass.swift in Sources */,
 				AF150DAC20B247DE00BB4831 /* PropertyTableViewCell.swift in Sources */,
 				AF150DA020AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift in Sources */,
 				88F2592489E9900BC672745C /* PersistenceService.swift in Sources */,
 				88F25D29637E83180C7195F1 /* APIDataRequestService.swift in Sources */,
 				88F259657A8C5AABF4E2B3ED /* APICoreDataService.swift in Sources */,
 				88F25CC8D2DD7C59DD6DBA53 /* PropertyTableViewController.swift in Sources */,
+				88F25F37EEDCE82153697623 /* ExclusionValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

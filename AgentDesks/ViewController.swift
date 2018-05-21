@@ -5,7 +5,7 @@
 //  Created by Mathew Wong on 5/17/18.
 //  Copyright © 2018 yidgetsoft. All rights reserved.
 //
-
+    
 import UIKit
 import SnapKit
 import CoreData
@@ -20,9 +20,11 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
 
         let d = APIDataService()
+
         d.process()
         d.coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
             if dictionary["exclusions"] != nil && dictionary["facilities"] != nil {
+
                 self.propertyTableView = PropertyTableViewController()
                 self.propertyTableView?.items = dictionary["facilities"] as! [NSMutableDictionary]
                 self.propertyTableView?.view.removeFromSuperview()
@@ -44,6 +46,23 @@ class ViewController: UIViewController {
                 })
 
                 self.propertyTableView?.tableView.reloadData()
+            }
+        })
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let exclusionValidator = ExclusionValidator()
+        exclusionValidator.validate()
+        exclusionValidator.validationErrorChange.subscribe(onNext: { (validationCheck) in
+            if validationCheck {
+                print("validation: ", validationCheck)
+                let alert = UIAlertController(title: "Whoops", message: "Sorry, the filter combination is not allowed.", preferredStyle: .alert)
+
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+                self.present(alert, animated: true, completion: nil)
             }
         })
 

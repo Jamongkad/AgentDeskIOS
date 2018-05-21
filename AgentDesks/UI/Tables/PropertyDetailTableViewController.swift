@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import CoreData
 
 class PropertyDetailTableViewController: UITableViewController {
 
@@ -22,7 +23,6 @@ class PropertyDetailTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellID, for: indexPath)
         // Configure the cell...
         let item = self.options[indexPath.row]
-        print("Hey: ", item)
         cell.textLabel?.text = item["name"] as? String
 
         let image = UIImage(named: item["icon"] as! String)
@@ -36,6 +36,30 @@ class PropertyDetailTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let option = self.options[indexPath.row]
+
+        let facility_id = self.property?["facility_id"] as! String
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserList")
+        fetchRequest.predicate = NSPredicate(format: "facility_id = %@", facility_id)
+
+        do {
+            let list = try PersistenceService.context.fetch(fetchRequest) as? [NSManagedObject]
+            if list!.count == 0 {
+                let userList = UserList(context: PersistenceService.context)
+                userList.facility_id = facility_id
+                userList.option_id = option["id"] as? String
+                print("We have a new UserList record")
+            } else {
+                list![0].setValue(option["id"], forKey: "option_id")
+                print("We have a existing UserList record")
+            }
+
+        } catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
+
+        PersistenceService.saveContext()
     }
 
 }

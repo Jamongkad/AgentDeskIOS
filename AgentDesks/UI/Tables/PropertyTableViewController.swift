@@ -11,7 +11,7 @@ class PropertyTableViewController : UITableViewController {
 
     var items: [NSMutableDictionary] = []
     var cell: PropertyTableViewCell? = nil
-    let cellID = "cellID"
+    let cellID = "UITableViewCell"
 
     private let selected = Variable<NSDictionary>([:])
     var selectedChange:Observable<NSDictionary> {
@@ -28,14 +28,23 @@ class PropertyTableViewController : UITableViewController {
     }
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellID, for: indexPath)
-        
-        // Configure the cell...
+
+        let reuseId = "FancyCell"
+
+        let cell: UITableViewCell = {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId) else {
+                return UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseId)
+            }
+            return cell
+        }()
+
         let item = self.items[indexPath.row]
+
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
-
         cell.textLabel?.text = item["name"] as? String
+        cell.detailTextLabel?.text = "Value"
+
         return cell
     }
     

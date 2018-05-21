@@ -20,10 +20,15 @@
         <attribute name="option_name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="facilities" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Facilities" inverseName="options" inverseEntity="Facilities" syncable="YES"/>
     </entity>
+    <entity name="UserList" representedClassName="UserList" syncable="YES">
+        <attribute name="facility_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="option_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Facilities" positionX="-290" positionY="18" width="128" height="88"/>
         <element name="ExclusionList" positionX="-234" positionY="-108" width="128" height="73"/>
-        <element name="FacilityOptions" positionX="-549" positionY="11" width="126" height="103"/>
         <element name="Exclusions" positionX="-468" positionY="-144" width="128" height="88"/>
+        <element name="Facilities" positionX="-290" positionY="18" width="128" height="88"/>
+        <element name="FacilityOptions" positionX="-549" positionY="11" width="126" height="103"/>
+        <element name="UserList" positionX="-342" positionY="18" width="128" height="75"/>
     </elements>
 </model>

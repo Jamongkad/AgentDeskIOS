@@ -2,7 +2,7 @@
 //  FacilityOptions+CoreDataProperties.swift
 //  AgentDesks
 //
-//  Created by Mathew Wong on 5/19/18.
+//  Created by Mathew Wong on 5/21/18.
 //  Copyright © 2018 yidgetsoft. All rights reserved.
 //
 //
@@ -17,9 +17,9 @@ extension FacilityOptions {
         return NSFetchRequest<FacilityOptions>(entityName: "FacilityOptions")
     }
 
+    @NSManaged public var icon: String?
     @NSManaged public var id: String?
     @NSManaged public var option_name: String?
-    @NSManaged public var icon: String?
     @NSManaged public var facilities: Facilities?
 
 }
