@@ -52,6 +52,8 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        //A bit of a code smell on my part. If I had more time I can move the validation logic somewhere else.
         self.propertyTableView?.tableView.reloadData()
         let exclusionValidator = ExclusionValidator()
         exclusionValidator.validate()

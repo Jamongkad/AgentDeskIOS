@@ -49,10 +49,8 @@ class PropertyDetailTableViewController: UITableViewController {
                 let userList = UserList(context: PersistenceService.context)
                 userList.facility_id = facility_id
                 userList.option_id = option["id"] as? String
-                print("We have a new UserList record")
             } else {
                 list![0].setValue(option["id"], forKey: "option_id")
-                print("We have a existing UserList record")
             }
 
         } catch let error as NSError {

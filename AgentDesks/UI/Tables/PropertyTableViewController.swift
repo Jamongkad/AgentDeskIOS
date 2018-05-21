@@ -41,11 +41,10 @@ class PropertyTableViewController : UITableViewController {
 
         let item = self.items[indexPath.row]
 
-        cell.detailTextLabel?.text = SelectedLabel().label(facilityId: item["facility_id"] as! String, options: item["options"] as! Array<NSDictionary>)
+        cell.detailTextLabel?.text = Util.label(facilityId: item["facility_id"] as! String, options: item["options"] as! Array<NSDictionary>)
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = item["name"] as? String
-
 
         return cell
     }

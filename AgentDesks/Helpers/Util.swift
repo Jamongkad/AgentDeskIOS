@@ -6,8 +6,8 @@
 import Foundation
 import CoreData
 
-class SelectedLabel {
-    func label(facilityId: String, options: Array<NSDictionary>) -> String {
+class Util {
+    class func label(facilityId: String, options: Array<NSDictionary>) -> String {
 
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserList")
         fetchRequest.resultType = .dictionaryResultType
@@ -31,5 +31,17 @@ class SelectedLabel {
         }
         
         return ""
+    }
+
+    class func reset(entity: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            //Reset Storage for new fresh request.
+            try PersistenceService.context.execute(deleteRequest)
+        } catch let error as NSError {
+            print(error)
+        }
     }
 }

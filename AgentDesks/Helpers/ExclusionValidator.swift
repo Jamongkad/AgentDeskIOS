@@ -53,16 +53,7 @@ class ExclusionValidator {
 
                         if(g == exclusionList) {
                             print("validation error")
-
-                            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserList")
-                            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-                            do {
-                                try PersistenceService.context.execute(deleteRequest)
-                            } catch let error as NSError {
-                                print(error)
-                            }
-
+                            Util.reset(entity: "UserList")
                             self.validationError.value = true
                         }
                     }

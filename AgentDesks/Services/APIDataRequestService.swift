@@ -13,9 +13,7 @@ class APIDataRequestService {
     func requestDataFromAPI(completion: (() -> Void)!) {
 
         //let's clear data before we make a request for a fresh batch.
-        self.reset(entity: "Facilities")
-        self.reset(entity: "ExclusionList")
-
+        self.resetDB()
         Alamofire.request(AppConstants.Domains.Prod).responseJSON { response in
             switch response.result {
             case .success:
@@ -62,15 +60,8 @@ class APIDataRequestService {
         }
     }
 
-    func reset(entity: String) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-        do {
-            //Reset Storage for new fresh request.
-            try PersistenceService.context.execute(deleteRequest)
-        } catch let error as NSError {
-            print(error)
-        }
+    func resetDB() {
+        Util.reset(entity: "Facilities")
+        Util.reset(entity: "ExclusionList")
     }
 }
