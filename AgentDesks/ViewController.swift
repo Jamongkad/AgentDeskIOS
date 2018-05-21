@@ -19,52 +19,34 @@ class ViewController: UIViewController {
         self.title = "Property Picker"
         self.view.backgroundColor = .white
 
-        /*
-        let myLabel:UILabel = UILabel()
-        myLabel.text = "Welcome back to iOS Mathew!"
-        myLabel.textColor = .black
-        myLabel.textAlignment = .center
-
-        let myButton:UIButton = UIButton()
-        myButton.setTitle("Plox", for: .normal)
-        myButton.setTitleColor(UIColor.blue, for: .normal)
-        myButton.addTarget(self, action: #selector(self.ploxinate), for: .touchUpInside)
-
-        self.view.addSubview(myLabel)
-        self.view.addSubview(myButton)
-
-        myLabel.snp.makeConstraints { (make) in
-            make.center.equalTo(self.view)
-        }
-        
-        myButton.snp.makeConstraints { (make) in
-            make.top.equalTo(myLabel.snp.bottom)
-            make.centerX.equalTo(self.view)
-        }
-        */
-
         let d = APIDataService()
         d.process()
         d.coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
-            self.propertyTableView = PropertyTableViewController()
-            self.propertyTableView?.items = dictionary["facilities"] as! [NSMutableDictionary]
-            self.propertyTableView?.view.removeFromSuperview()
-            self.propertyTableView?.didMove(toParentViewController: self)
+            if dictionary["exclusions"] != nil && dictionary["facilities"] != nil {
+                self.propertyTableView = PropertyTableViewController()
+                self.propertyTableView?.items = dictionary["facilities"] as! [NSMutableDictionary]
+                self.propertyTableView?.view.removeFromSuperview()
+                self.propertyTableView?.didMove(toParentViewController: self)
 
-            self.view.addSubview(self.propertyTableView!.view)
+                self.view.addSubview(self.propertyTableView!.view)
 
-            self.propertyTableView?.view.snp.makeConstraints({ (make) in
-                make.edges.equalTo(self.view)
-            })
+                self.propertyTableView?.view.snp.makeConstraints({ (make) in
+                    make.edges.equalTo(self.view)
+                })
 
-            self.propertyTableView?.tableView.reloadData()
+                self.propertyTableView?.selectedChange.subscribe(onNext: { (data) in
 
+                    if data["facility_id"] != nil {
+                        let detailController: PropertyDetailTableViewController = PropertyDetailTableViewController()
+                        detailController.property = data
+                        self.navigationController?.pushViewController(detailController, animated: true)
+                    }
+                })
+
+                self.propertyTableView?.tableView.reloadData()
+            }
         })
 
-    }
-
-    @objc func ploxinate(sender: UIButton) {
-        NSLog("pwet")
     }
 }
 

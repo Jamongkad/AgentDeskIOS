@@ -26,6 +26,8 @@
 		AF150DB220B25FD200BB4831 /* CacheTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150DB120B25FD100BB4831 /* CacheTimer.swift */; };
 		AF150DB420B260B300BB4831 /* Services in Resources */ = {isa = PBXBuildFile; fileRef = AF150DB320B260B300BB4831 /* Services */; };
 		AF150DB620B261AD00BB4831 /* UI in Resources */ = {isa = PBXBuildFile; fileRef = AF150DB520B261AD00BB4831 /* UI */; };
+		AF150DB820B26A6A00BB4831 /* Config in Resources */ = {isa = PBXBuildFile; fileRef = AF150DB720B26A6A00BB4831 /* Config */; };
+		AF150DBA20B28AED00BB4831 /* PropertyDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF150DB920B28AED00BB4831 /* PropertyDetailTableViewController.swift */; };
 		AF41B69520AE978C001BFBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69420AE978C001BFBC3 /* AppDelegate.swift */; };
 		AF41B69720AE978C001BFBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69620AE978C001BFBC3 /* ViewController.swift */; };
 		AF41B69D20AE978C001BFBC3 /* AgentDesks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */; };
@@ -51,12 +53,14 @@
 		AF150DA320B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExclusionList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF150DA420B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExclusionList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF150DA720B15B8000BB4831 /* APIDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIDataService.swift; path = Services/APIDataService.swift; sourceTree = "<group>"; };
-		AF150DA920B1619A00BB4831 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AF150DA920B1619A00BB4831 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppConstants.swift; path = Config/AppConstants.swift; sourceTree = "<group>"; };
 		AF150DAB20B247DE00BB4831 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PropertyTableViewCell.swift; path = UI/Tables/Cells/PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		AF150DAF20B25ECB00BB4831 /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
 		AF150DB120B25FD100BB4831 /* CacheTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CacheTimer.swift; path = Helpers/CacheTimer.swift; sourceTree = "<group>"; };
 		AF150DB320B260B300BB4831 /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
 		AF150DB520B261AD00BB4831 /* UI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UI; sourceTree = "<group>"; };
+		AF150DB720B26A6A00BB4831 /* Config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Config; sourceTree = "<group>"; };
+		AF150DB920B28AED00BB4831 /* PropertyDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyDetailTableViewController.swift; path = UI/Tables/PropertyDetailTableViewController.swift; sourceTree = "<group>"; };
 		AF41B69120AE978C001BFBC3 /* AgentDesks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentDesks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF41B69420AE978C001BFBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF41B69620AE978C001BFBC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,31 +120,33 @@
 		AF41B69320AE978C001BFBC3 /* AgentDesks */ = {
 			isa = PBXGroup;
 			children = (
+				AF150DB720B26A6A00BB4831 /* Config */,
 				AF150DAF20B25ECB00BB4831 /* Helpers */,
 				AF150DB320B260B300BB4831 /* Services */,
-				AF150DAB20B247DE00BB4831 /* PropertyTableViewCell.swift */,
+				AF150DB520B261AD00BB4831 /* UI */,
+				AF41B6A320AE978E001BFBC3 /* Info.plist */,
+				88F258C7547F79BA409465C9 /* APICoreDataService.swift */,
+				88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */,
+				AF150DA720B15B8000BB4831 /* APIDataService.swift */,
+				AF150DA920B1619A00BB4831 /* AppConstants.swift */,
+				AF41B69420AE978C001BFBC3 /* AppDelegate.swift */,
+				AF150DB120B25FD100BB4831 /* CacheTimer.swift */,
 				AF150DA320B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift */,
 				AF150DA420B0B2CD00BB4831 /* ExclusionList+CoreDataProperties.swift */,
-				AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */,
-				AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */,
-				AF150DB120B25FD100BB4831 /* CacheTimer.swift */,
 				AF150D9920AFF8D500BB4831 /* Exclusions+CoreDataClass.swift */,
+				AF150DB920B28AED00BB4831 /* PropertyDetailTableViewController.swift */,
 				AF150D9A20AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift */,
 				AF150D9B20AFF8D500BB4831 /* Facilities+CoreDataClass.swift */,
 				AF150D9C20AFF8D500BB4831 /* Facilities+CoreDataProperties.swift */,
-				AF41B69420AE978C001BFBC3 /* AppDelegate.swift */,
+				AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */,
+				AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */,
+				88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */,
+				AF150DAB20B247DE00BB4831 /* PropertyTableViewCell.swift */,
+				88F253D69D53A5BB21CE178A /* PropertyTableViewController.swift */,
 				AF41B69620AE978C001BFBC3 /* ViewController.swift */,
 				AF41B69E20AE978E001BFBC3 /* Assets.xcassets */,
-				AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */,
-				AF41B6A320AE978E001BFBC3 /* Info.plist */,
 				AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */,
-				88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */,
-				AF150DA720B15B8000BB4831 /* APIDataService.swift */,
-				AF150DA920B1619A00BB4831 /* AppConstants.swift */,
-				88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */,
-				AF150DB520B261AD00BB4831 /* UI */,
-				88F258C7547F79BA409465C9 /* APICoreDataService.swift */,
-				88F253D69D53A5BB21CE178A /* PropertyTableViewController.swift */,
+				AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */,
 			);
 			path = AgentDesks;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			files = (
 				AF150DB620B261AD00BB4831 /* UI in Resources */,
 				AF150DB420B260B300BB4831 /* Services in Resources */,
+				AF150DB820B26A6A00BB4831 /* Config in Resources */,
 				AF150DB020B25ECB00BB4831 /* Helpers in Resources */,
 				AF41B6A220AE978E001BFBC3 /* LaunchScreen.storyboard in Resources */,
 				AF41B69F20AE978E001BFBC3 /* Assets.xcassets in Resources */,
@@ -284,6 +291,7 @@
 				AF41B69520AE978C001BFBC3 /* AppDelegate.swift in Sources */,
 				AF150DA520B0B2CD00BB4831 /* ExclusionList+CoreDataClass.swift in Sources */,
 				AF150DAA20B1619A00BB4831 /* AppConstants.swift in Sources */,
+				AF150DBA20B28AED00BB4831 /* PropertyDetailTableViewController.swift in Sources */,
 				AF150DAC20B247DE00BB4831 /* PropertyTableViewCell.swift in Sources */,
 				AF150DA020AFF8D500BB4831 /* Exclusions+CoreDataProperties.swift in Sources */,
 				88F2592489E9900BC672745C /* PersistenceService.swift in Sources */,

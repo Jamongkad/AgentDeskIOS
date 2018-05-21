@@ -13,15 +13,13 @@ class APICoreDataService {
     var facilities = [Facilities]()
     var exclusionList = [ExclusionList]()
 
-    let finalData = Variable<NSMutableDictionary>([:])
+    private let finalData = Variable<NSMutableDictionary>([:])
     var finalDataChanged:Observable<NSMutableDictionary> {
         return finalData.asObservable()
     }
 
     func fetchData() {
         do {
-
-            print("Fetching")
 
             let facilitiesRequest: NSFetchRequest<Facilities> = Facilities.fetchRequest()
             let exclusionsRequest: NSFetchRequest<ExclusionList> = ExclusionList.fetchRequest()

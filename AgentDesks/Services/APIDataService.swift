@@ -17,21 +17,27 @@ class APIDataService {
     let disposeBag = DisposeBag()
     let cacheTimer = CacheTimer()
     let coreDataService = APICoreDataService()
+    let dataRequestService = APIDataRequestService()
 
     init() {
         self.cacheTimer.startTimer()
         self.cacheTimer.signalChange
                 .subscribe(onNext: { signalBool in
             if signalBool {
-                let requestService = APIDataRequestService()
-                requestService.requestDataFromAPI(completion: { () in
-                    self.coreDataService.fetchData()
-                })
+                //if timer is done request a fresh batch of data from the API
+                print("Request New Batch")
+                self.requestData()
             }
         })
     }
 
     func process() {
-        self.coreDataService.fetchData()
+        self.requestData()
+    }
+
+    private func requestData() {
+        self.dataRequestService.requestDataFromAPI(completion: { () in
+            self.coreDataService.fetchData()
+        })
     }
 }
