@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
 
         let d = APIDataService()
-
         d.process()
+
         d.coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
             if dictionary["exclusions"] != nil && dictionary["facilities"] != nil {
 
