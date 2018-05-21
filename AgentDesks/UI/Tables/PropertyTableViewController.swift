@@ -6,6 +6,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import CoreData
 
 class PropertyTableViewController : UITableViewController {
 
@@ -40,10 +41,31 @@ class PropertyTableViewController : UITableViewController {
 
         let item = self.items[indexPath.row]
 
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserList")
+        fetchRequest.resultType = .dictionaryResultType
+        fetchRequest.predicate = NSPredicate(format: "facility_id = %@", item["facility_id"] as! String)
+
+        do {
+            let list = try PersistenceService.context.fetch(fetchRequest)
+            if list.count != 0 {
+                let userOption = list[0] as! NSDictionary
+                let chosenOption = (item["options"] as! NSArray).filter { (v) -> Bool in
+                    return (v as! NSDictionary)["id"] as! String == userOption["option_id"] as! String
+                }
+
+                print(chosenOption)
+                cell.detailTextLabel?.text = (chosenOption[0] as! NSDictionary)["name"] as! String
+            } else {
+                cell.detailTextLabel?.text = ""
+            }
+        } catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
+
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = item["name"] as? String
-        cell.detailTextLabel?.text = "Value"
+
 
         return cell
     }

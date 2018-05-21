@@ -20,9 +20,8 @@ class ExclusionValidator {
         coreDataService.fetchData()
         coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
 
-            let userListRequest: NSFetchRequest<UserList> = UserList.fetchRequest()
-
             do {
+                let userListRequest: NSFetchRequest<UserList> = UserList.fetchRequest()
                 let list = try PersistenceService.context.fetch(userListRequest)
                 if list.count != 0 {
                     print("We have a existing UserList record")
@@ -74,8 +73,5 @@ class ExclusionValidator {
                 print("Fetch failed: \(error.localizedDescription)")
             }
         })
-
-
     }
-
 }

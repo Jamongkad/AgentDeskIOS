@@ -52,6 +52,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.propertyTableView?.tableView.reloadData()
         let exclusionValidator = ExclusionValidator()
         exclusionValidator.validate()
         exclusionValidator.validationErrorChange.subscribe(onNext: { (validationCheck) in
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
                 print("validation: ", validationCheck)
                 let alert = UIAlertController(title: "Whoops", message: "Sorry, the filter combination is not allowed.", preferredStyle: .alert)
 
-                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                //alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
                 self.present(alert, animated: true, completion: nil)
