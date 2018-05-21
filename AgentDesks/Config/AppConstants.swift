@@ -16,6 +16,5 @@ struct AppConstants {
         static let QA = "test.qa.com"
     }
 
-    //static let refreshTimeInSeconds = 86400.0
-    static let refreshTimeInSeconds = 30.0
+    static let refreshTimeInSeconds = 86400.0
 }

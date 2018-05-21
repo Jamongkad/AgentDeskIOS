@@ -53,7 +53,6 @@ class PropertyTableViewController : UITableViewController {
                     return (v as! NSDictionary)["id"] as! String == userOption["option_id"] as! String
                 }
 
-                print(chosenOption)
                 cell.detailTextLabel?.text = (chosenOption[0] as! NSDictionary)["name"] as! String
             } else {
                 cell.detailTextLabel?.text = ""

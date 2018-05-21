@@ -60,7 +60,6 @@ class ViewController: UIViewController {
                 print("validation: ", validationCheck)
                 let alert = UIAlertController(title: "Whoops", message: "Sorry, the filter combination is not allowed.", preferredStyle: .alert)
 
-                //alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
                 self.present(alert, animated: true, completion: nil)

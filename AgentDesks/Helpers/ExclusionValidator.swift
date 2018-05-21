@@ -20,11 +20,11 @@ class ExclusionValidator {
         coreDataService.fetchData()
         coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
 
+            //Here be dragons in this part...
             do {
                 let userListRequest: NSFetchRequest<UserList> = UserList.fetchRequest()
                 let list = try PersistenceService.context.fetch(userListRequest)
                 if list.count != 0 {
-                    print("We have a existing UserList record")
 
                     var userListContainer = [NSDictionary]()
                     for choice in list {
@@ -53,8 +53,6 @@ class ExclusionValidator {
 
                         if(g == exclusionList) {
                             print("validation error")
-                            print(userListContainer)
-                            print(exclusionList)
 
                             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserList")
                             let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
