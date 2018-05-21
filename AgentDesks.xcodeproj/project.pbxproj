@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88F2512A34EE317EC3BD61E8 /* SelectedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F25DDA531FD3A959C50756 /* SelectedLabel.swift */; };
 		88F2592489E9900BC672745C /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */; };
 		88F259657A8C5AABF4E2B3ED /* APICoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F258C7547F79BA409465C9 /* APICoreDataService.swift */; };
 		88F25CC8D2DD7C59DD6DBA53 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F253D69D53A5BB21CE178A /* PropertyTableViewController.swift */; };
@@ -47,6 +48,7 @@
 		88F25792B45C99AFD9EC4419 /* APIDataRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIDataRequestService.swift; path = Services/APIDataRequestService.swift; sourceTree = "<group>"; };
 		88F258C7547F79BA409465C9 /* APICoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICoreDataService.swift; path = Services/APICoreDataService.swift; sourceTree = "<group>"; };
 		88F2597B96BC1673DEB4A0FD /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistenceService.swift; path = Services/PersistenceService.swift; sourceTree = "<group>"; };
+		88F25DDA531FD3A959C50756 /* SelectedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedLabel.swift; path = Helpers/SelectedLabel.swift; sourceTree = "<group>"; };
 		8EBD28C52843104103C7209E /* Pods-AgentDesks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentDesks.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgentDesks/Pods-AgentDesks.release.xcconfig"; sourceTree = "<group>"; };
 		AF150D9720AFF8D500BB4831 /* FacilityOptions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacilityOptions+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF150D9820AFF8D500BB4831 /* FacilityOptions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacilityOptions+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				AF41B69B20AE978C001BFBC3 /* AgentDesks.xcdatamodeld */,
 				AF41B6A020AE978E001BFBC3 /* LaunchScreen.storyboard */,
 				88F2503BB45F28ED1798A43A /* ExclusionValidator.swift */,
+				88F25DDA531FD3A959C50756 /* SelectedLabel.swift */,
 			);
 			path = AgentDesks;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				88F259657A8C5AABF4E2B3ED /* APICoreDataService.swift in Sources */,
 				88F25CC8D2DD7C59DD6DBA53 /* PropertyTableViewController.swift in Sources */,
 				88F25F37EEDCE82153697623 /* ExclusionValidator.swift in Sources */,
+				88F2512A34EE317EC3BD61E8 /* SelectedLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
