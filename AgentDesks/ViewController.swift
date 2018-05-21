@@ -9,16 +9,17 @@
 import UIKit
 import SnapKit
 import CoreData
-import RxSwift
 
 class ViewController: UIViewController {
+
+    var propertyTableView: PropertyTableViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Property Picker"
         self.view.backgroundColor = .white
 
-
+        /*
         let myLabel:UILabel = UILabel()
         myLabel.text = "Welcome back to iOS Mathew!"
         myLabel.textColor = .black
@@ -40,12 +41,26 @@ class ViewController: UIViewController {
             make.top.equalTo(myLabel.snp.bottom)
             make.centerX.equalTo(self.view)
         }
+        */
 
         let d = APIDataService()
         d.process()
         d.coreDataService.finalDataChanged.subscribe(onNext: { dictionary in
-            print(dictionary)
+            self.propertyTableView = PropertyTableViewController()
+            self.propertyTableView?.items = dictionary["facilities"] as! [NSMutableDictionary]
+            self.propertyTableView?.view.removeFromSuperview()
+            self.propertyTableView?.didMove(toParentViewController: self)
+
+            self.view.addSubview(self.propertyTableView!.view)
+
+            self.propertyTableView?.view.snp.makeConstraints({ (make) in
+                make.edges.equalTo(self.view)
+            })
+
+            self.propertyTableView?.tableView.reloadData()
+
         })
+
     }
 
     @objc func ploxinate(sender: UIButton) {
